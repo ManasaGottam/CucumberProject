@@ -31,7 +31,8 @@ pipeline {
     post {
         always {
             // Archive test results
-            junit '**/target/surefire-reports/TEST-*.xml'
+//            junit '**/target/surefire-reports/TEST-*.xml'
+            junit 'reports/Session_*/html-report.html'
         }
     }
 }
