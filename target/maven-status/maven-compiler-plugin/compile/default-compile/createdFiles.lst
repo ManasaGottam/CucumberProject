@@ -1,0 +1,6 @@
+org\example\utils\PropertiesUtils.class
+org\example\config\WebDriverConfig.class
+org\example\TestAutomationFrameworkApplication.class
+org\example\Main.class
+org\example\pages\LoginPage.class
+org\example\AppConfig.class
