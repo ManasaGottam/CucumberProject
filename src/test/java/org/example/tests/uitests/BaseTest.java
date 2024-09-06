@@ -7,7 +7,6 @@ import org.example.pages.LoginPage;
 import org.example.utils.AfterEachExtension;
 import org.example.utils.ReportUtils;
 import org.example.utils.ScreenshotUtils;
-import org.example.utils.SeleniumDriverUtils;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -29,8 +28,6 @@ public class BaseTest {
     ReportUtils reportUtils;
     @Autowired
     ScreenshotUtils screenshotUtils;
-    @Autowired
-    private SeleniumDriverUtils seleniumDriverUtils;
     static ExtentReports extentReports;
     static ExtentTest extentTest;
 
@@ -53,7 +50,7 @@ public class BaseTest {
 
     @AfterAll
     public void tearDown() {
-        seleniumDriverUtils.close();
+//        seleniumDriverUtils.close();
         reportUtils.closeInstance();
     }
 }

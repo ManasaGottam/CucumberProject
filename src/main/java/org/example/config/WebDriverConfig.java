@@ -8,13 +8,15 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 
 import static java.lang.String.format;
 
 @Configuration
 public class WebDriverConfig {
 
-    @Bean
+    @Scope("singleton")
+    @Bean(destroyMethod = "quit")
     @SneakyThrows
     public WebDriver webDriver() {
         WebDriver driver;
